@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1> ShoppingList</h1>
+    <div id="app">
+        <button id="getAllButton" v-on:click="getAllShoppingItems" class="btn btn-primary">Get All ShoppingItems</button>
+        <br/>
+        <ul id ="ShoppingItems" v.if="ShoppingItems.length">
+            <li v-for="item in ShoppingItems">
+                {{item.id}} {{item.name}} {{item.price}} {{item.quantity}}
+            </li>
+            <div v-else>no ShoppingItems</div>
+        </ul>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
